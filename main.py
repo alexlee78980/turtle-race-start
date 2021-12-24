@@ -21,18 +21,18 @@ blue.color("blue")
 black = Turtle()
 black.color("black")
 turtle_list = [red, green, purple, blue, yellow, black]
+random.shuffle(turtle_list)
 start_x = -width/2 + 10
 start_y = -150
 for turtle in turtle_list:
     turtle.shape("turtle")
-    turtle.shapesize(1)
     turtle.penup()
     turtle.setposition(start_x, start_y)
     start_y += 50
 while no_finish:
     for turtle in turtle_list:
         turtle.forward(random.randint(1, 10))
-        if turtle.xcor() >= width/2-20:
+        if turtle.xcor() >= width/2 - 10:
             winner = turtle
             no_finish = False
             break
